@@ -4,8 +4,8 @@ class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lat: 0,
-      lon: 0
+      lat: '',
+      lon: ''
     };
     this.onChangeLat = this.onChangeLat.bind(this);
     this.onChangeLon = this.onChangeLon.bind(this);
@@ -25,9 +25,9 @@ class Input extends React.Component {
   render() {
     return (
       <div>
-        <input min = {-90} max = {90} onChange = {(e) => this.onChangeLat(e) } value={this.state.lat} type="number" />
+        <input min = {-90} max = {90} onChange = {(e) => this.onChangeLat(e) } value={this.state.lat} type="number" placeholder = "lat" />
 
-        <input min = {-180} max = {180} onChange = {(e) => this.onChangeLon(e)} value={this.state.lon} val type="number" />
+        <input min = {-180} max = {180} onChange = {(e) => this.onChangeLon(e)} value={this.state.lon} val type="number" placeholder = "lon"/>
       </div>
     );
   }
